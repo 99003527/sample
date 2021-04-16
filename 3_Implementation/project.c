@@ -19,7 +19,7 @@
 #define LED_OFF "0"
 #define LED_ON "1"
 #define BRIGHTNESS_DELAY_7 7
-#define BRIGHTNESS_DELAY_3 3
+//#define BRIGHTNESS_DELAY_3 3
 #define BRIGHTNESS_DELAY_1 1
 //#define TRUE 1
 //#define FALSE 0
@@ -44,12 +44,12 @@ int main()
 		if (joystick_pressed_up == 1) 
         {
             press_count++;
-	        led_flash_mode = BRIGHTNESS_DELAY_1;	
+	        led_flash_mode = BRIGHTNESS_DELAY_7;	
 		}
 		else 
         {
-			led_flash_mode = BRIGHTNESS_DELAY_7;
-            led_flash_mode = BRIGHTNESS_DELAY_3;
+			led_flash_mode = BRIGHTNESS_DELAY_1;
+            //led_flash_mode = BRIGHTNESS_DELAY_3;
             press_count++;
         }
 	    printf("Flashing %d time(s):  Joystick = %d & counter = %d\n", led_flash_mode, joystick_pressed_up, press_count);
@@ -167,29 +167,29 @@ void flashLED(int mode)
     {
 	    turnLEDOn();  	                            //ON for 100ms (1)
 	    delayCode(0,TRIGGER_DELAY_100ms);           //dealy
-	    turnLEDOff();                               //OFF for 100ms 
+	    //turnLEDOff();                               //OFF for 100ms 
 	    delayCode(0,TRIGGER_DELAY_100ms);	    //delay
-	    turnLEDOn();                                //ON for 100ms (2)
+	    //turnLEDOn();                                //ON for 100ms (2)
 	    delayCode(0,TRIGGER_DELAY_100ms);           //delay
-	    turnLEDOff();                               //OFF for 100ms
+	    //turnLEDOff();                               //OFF for 100ms
 	    delayCode(0,TRIGGER_DELAY_100ms);	    //delay
-	    turnLEDOn();                                //ON for 100ms (3)
+	    //turnLEDOn();                                //ON for 100ms (3)
 	    delayCode(0,TRIGGER_DELAY_100ms);	    //delay
-	    turnLEDOff();                               //OFF for 100ms
+	   // turnLEDOff();                               //OFF for 100ms
 	    delayCode(0,TRIGGER_DELAY_100ms);
-        turnLEDOn();  	                            //ON for 100ms (4)
+       // turnLEDOn();  	                            //ON for 100ms (4)
 	    delayCode(0,TRIGGER_DELAY_100ms);           //dealy
-	    turnLEDOff();                               //OFF for 100ms 
+	   // turnLEDOff();                               //OFF for 100ms 
 	    delayCode(0,TRIGGER_DELAY_100ms);	    //delay
-	    turnLEDOn();                                //ON for 100ms (5)
+	   // turnLEDOn();                                //ON for 100ms (5)
 	    delayCode(0,TRIGGER_DELAY_100ms);           //delay
-	    turnLEDOff();                               //OFF for 100ms
+	   // turnLEDOff();                               //OFF for 100ms
 	    delayCode(0,TRIGGER_DELAY_100ms);	    //delay
-	    turnLEDOn();                                //ON for 100ms (6)
+	   // turnLEDOn();                                //ON for 100ms (6)
 	    delayCode(0,TRIGGER_DELAY_100ms);	    //delay
-	    turnLEDOff();                               //OFF for 100ms
+	   // turnLEDOff();                               //OFF for 100ms
 	    delayCode(0,TRIGGER_DELAY_100ms);
-        turnLEDOn();                                //ON for 100ms (7)
+      //  turnLEDOn();                                //ON for 100ms (7)
 	    delayCode(0,TRIGGER_DELAY_100ms);	    //delay
 	    turnLEDOff();                               //OFF for 900ms
 	    delayCode(0,TRIGGER_DELAY_900ms);
